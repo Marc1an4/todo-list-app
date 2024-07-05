@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../db/db';
+import sequelize from '../config/db';
 
 export class Todo extends Model {
   public id!: number;
