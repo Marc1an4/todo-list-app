@@ -32,11 +32,11 @@ npm install
 
 5. **Create a .env file in the root directory (backend/) and set environment variables**
 ```bash
-DB_USER='your_user | postgres'
-DB_PASSWORD='your_password'
-DB_HOST='localhost'
-DB_NAME='todo_app'
-DB_PORT='your_port | 8080'
+DB_USER=your_user | postgres
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_NAME=todo_app
+DB_PORT=your_port | 8080
 ```
 
 6. **Create the PostgreSQL database**
