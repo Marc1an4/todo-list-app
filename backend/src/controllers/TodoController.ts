@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import boom from 'boom';
 import { TodoService } from '../services/TodoService';
+import { createTaskSchema, updateTaskSchema } from '../schemas/todoSchema';
 
 const todoService = new TodoService();
 
@@ -32,6 +33,12 @@ export class TodoController {
 
     public async createTask(req: Request, res: Response, next: NextFunction): Promise<void> {
       try {
+        const validationResult = createTaskSchema.validate(req.body, { abortEarly: false });
+
+        if (validationResult.error) {
+            throw boom.badRequest(validationResult.error.details.map(d => d.message).join(', '));
+        }
+
         const { title, description, completed } = req.body;
         const newTask = await todoService.createTask({ title, description, completed });
         res.json(newTask);
@@ -45,16 +52,14 @@ export class TodoController {
         const { id } = req.params;
         const { title, description, completed } = req.body;
         const [, updatedTasks] = await todoService.updateTask(Number(id), { title, description, completed });
-  
-        if (updatedTasks.length > 0) {
+
+        if (updatedTasks && updatedTasks.length > 0) {
           res.json(updatedTasks[0]);
-        }
-        else {
+        } else {
           throw boom.notFound('Task not found or could not be updated');
         }
-        
       } catch (error) {
-        next(error);
+          next(error);
       }
     }
 

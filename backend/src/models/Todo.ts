@@ -11,7 +11,7 @@ export class Todo extends Model {
 Todo.init(
   {
     id: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
       set() {
