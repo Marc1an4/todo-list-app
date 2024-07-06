@@ -14,6 +14,9 @@ Todo.init(
       type: DataTypes.INTEGER.UNSIGNED,
       autoIncrement: true,
       primaryKey: true,
+      set() {
+        throw new Error('id is read-only');
+      },
     },
     title: {
       type: new DataTypes.STRING(128),

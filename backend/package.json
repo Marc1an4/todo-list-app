@@ -20,8 +20,10 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@types/boom": "^7.3.5",
     "@types/pg": "^8.11.6",
     "body-parser": "^1.20.2",
+    "boom": "^7.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "4.19.2",
