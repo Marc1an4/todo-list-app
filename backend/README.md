@@ -66,6 +66,18 @@ The API endpoints for this application include:
 - `PUT /api/todo/:id`: Update a todo item by ID.
 - `DELETE /api/todo/:id`: Delete a todo item by ID.
 
+# Example Request
+
+```json
+{
+    "title": "Buy groceries",
+    "description": "Go to the supermarket and buy the necessary supplies for the week.",
+    "completed": false
+}
+```
+- title is required.
+- description and completed are optional
+
 # Additional Information
 - Make sure to replace placeholders (your_user, your_password, your_port) in the .env file with your actual database credentials and configurations.
 - The express server runs on port 3000 by default unless overridden by the PORT environment variable.
