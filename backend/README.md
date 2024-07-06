@@ -54,7 +54,7 @@ npm run dev
 # API Endpoints Documentation
 The API endpoints for this application include:
 - `GET /api/todo`: Fetch all todo items.
-- `GET /api/todo/`:id: Fetch a todo item by ID.
+- `GET /api/todo/:id`: Fetch a todo item by ID.
 - `POST /api/todo`: Create a new todo item.
 - `PUT /api/todo/:id`: Update a todo item by ID.
 - `DELETE /api/todo/:id`: Delete a todo item by ID.
