@@ -1,5 +1,5 @@
 # To do List Application
-`Please refer to the README.md file in the backend folder for comprehensive documentation on setting up the development environment, API endpoints, and additional considerations.`
+#### Please refer to the README.md file in the backend folder for comprehensive documentation on setting up the development environment, API endpoints, and additional considerations.
 
 This repository contains a simple To Do List application built using Express and TypeScript. For detailed instructions on setting up and running the project.
 
