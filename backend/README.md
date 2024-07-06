@@ -45,11 +45,18 @@ CREATE DATABASE todo_app;
 ```
 
 7. **Ensure your PostgreSQL database server is running.**
-
-8. **Start the Express server**
+   
+8. **For development, run the server with**
 ```bash
 npm run dev
 ```
+
+9. **For production, build the project and then run the server:**
+```bash
+npm run build
+npm start
+```
+
 
 # API Endpoints Documentation
 The API endpoints for this application include:
