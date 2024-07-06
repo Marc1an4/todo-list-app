@@ -58,7 +58,7 @@ npm start
 ```
 
 
-# API Endpoints Documentation
+## API Endpoints Documentation
 The API endpoints for this application include:
 - `GET /api/todo`: Fetch all todo items.
 - `GET /api/todo/:id`: Fetch a todo item by ID.
@@ -66,7 +66,7 @@ The API endpoints for this application include:
 - `PUT /api/todo/:id`: Update a todo item by ID.
 - `DELETE /api/todo/:id`: Delete a todo item by ID.
 
-# Example Request
+### Example Request
 
 ```json
 {
@@ -78,7 +78,7 @@ The API endpoints for this application include:
 - title is required.
 - description and completed are optional
 
-# Additional Information
+## Additional Information
 - Make sure to replace placeholders (your_user, your_password, your_port) in the .env file with your actual database credentials and configurations.
 - The express server runs on port 3000 by default unless overridden by the PORT environment variable.
 - The application uses Sequelize with PostgreSQL as the database.
